@@ -43,7 +43,7 @@
              </ul>
            </section><!-- .traffic-->
            <section class="plugin"><!-- line -->
-              <div class="plugin"><canvas id="myChart" height="80"></canvas></div>
+              <div class="plugin"><canvas id="myChart" ></canvas></div>
             </section><!-- .plugin-->
            <section class= "daily_t_m_users">
              <div class = "daily_traffic">
@@ -79,7 +79,7 @@
                </div><!-- .socialMedia -->
            </section>
            <section class = "newM">
-             <div class = newMembers>
+             <div class = "newMembers flex">
                <h3>New Members</h3>
                <ul>
                   <li>
@@ -108,7 +108,7 @@
                   </li>
                </ul>
              </div><!--.newMembers-->
-             <div class = "recentActivity">
+             <div class = "recentActivity flex">
                <h3>Recent Activity</h3>
                <ul>
                   <li>
@@ -133,7 +133,7 @@
                   </li>
                </ul>
              </div><!--.recentActivity-->
-             <div class = "messageUser">
+             <div class = "messageUser flex">
 
                   <h3>Message User</h3>
                   <input type="text" method="post" name="searchForUser" id="searchForUser"
@@ -142,7 +142,7 @@
                   <button type="submit">Send</button>
 
            </div><!--.messageUser-->
-             <div class = "settings">
+             <div class = "settings flex">
               <h3>Settings</h3>
               <div class="inLine">
                  <p>Send Email Notafications</p>
@@ -153,15 +153,14 @@
                  </div><!--.inLine-->
                  <div class="inLine">
                      <p>Set Profile to Public</p>
-                      <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round">
+                     <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider round">
 
-                        <span>Off</span>
-                        <span>On</span>
-                        <a></a>
-
-                      </span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                          </span>
                   </label>
               </div><!--.inLine-->
                 <select name="timeZone" class="timeZone">
@@ -169,8 +168,8 @@
                     <option value="cet">CET(Central European Tme)</option>
                     <option value="UK">UK</option>
                     <option value="japan">Japan</option>
-                    <option value="Australia,Cidney">Australia,Cidney"</option>
-                    <option value="Los Angeles">los Angeles</option>
+                    <option value="Australia,Cidney">Sidney, Australia</option>
+                    <option value="Los Angeles">Los Angeles</option>
               </select>
               <button type="submit">Save</button>
               <button type="submit">Cancel</button>

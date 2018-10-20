@@ -98,4 +98,4 @@ var myChartDonut = new Chart(ctx, {
         },
        responsive:true
 });
-ctx.style.height = '250px';
+//ctx.style.height = '250px';

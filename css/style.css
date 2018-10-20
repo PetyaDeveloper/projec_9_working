@@ -171,7 +171,8 @@ nav img{
   text-align: center;
 }
 .daily_traffic, .mobile_users{
-  border-bottom: 2px solid lightgrey;
+  border-bottom: 2px solid grey;
+  padding-bottom: 25px;
 }
 /******************
  SOCIAL STATUS done!!!!!!!!!!!
@@ -255,7 +256,7 @@ nav img{
 /*   width: 40%;*/
 }
 .newMembers p{
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   margin: 0;
 }
 /*.date is newMemebers last p*/
@@ -335,11 +336,13 @@ nav img{
     display: inline-block;
 }
 */
+/*
 .inLine{
     display: flex;
     justify-content: space-between;
     border: 3px solid orange;
 }
+*/
 .slider{
     padding-top: 20.800px;
     
@@ -408,7 +411,9 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
+p{
+    text-transform: none;
+}
                 /******************************************************
                       styling the select timeZone
                 ************************************************/
@@ -433,34 +438,8 @@ input:checked + .slider:before {
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
-   }
-    /* NAV: DONE!!!! */
-    nav{
-      max-width: 80px;
-      width: 10%;
-      height: 320vh;
-      padding-top: 80px;
-      
-    }
-      
-      /************************************************
-                    NAV ON TABLET 769PX
-      *****************************************************/
-      nav {
-  background: #666699;
-  width: 100%;
-  padding-top: 60px;
-  display: inline-block;
-  text-align: center;
-  position: fixed;
-}
-nav img{
-  width: 30px;
-  height: 30px;
-  margin: 20px 5px 10px 5px;
-}
-      
-      
+   }  
+ 
      /****
        .main .traffic on tablet
       ****/
@@ -548,6 +527,38 @@ nav img{
       .newMembers ul{
           padding-left: 0;
       }      
+      /*********************************
+            create TWO COLUMNS FOR recentActivity and newMembers(.flex) 
+                section .newM
+      ********************************/
+      .newM{
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .flex{
+          flex: 50%;
+      } 
+      /**  put toggle switches one under the other   ***/
+      
+      
+      
+      
+      
+      
+      
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       /********************
           leftovers: .newM and .messageUser
       *********************/
@@ -589,7 +600,9 @@ nav img{
                       MEDIA QUERY PC: 1024PX
                         *********************************/
 @media (min-width: 1024px){
-    
+    body{
+        background: orange;
+    }
     /*input .spaceholder in order to show full label*/
     .table label{
         padding-left: 100px;
