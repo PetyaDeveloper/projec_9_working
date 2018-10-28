@@ -5,7 +5,7 @@ const main = document.getElementsByClassName('main')[0];
 // make it disappear on click
 
 const flashMessage = document.createElement('section');
-flashMessage.innerHTML = '<p><strong>Alert:</strong>Hello from my cool app. It is really hard but fun,s well and i will somehow make it.Press the X button to close this message.</p><button>X</button>';
+flashMessage.innerHTML = '<p><strong>Alert:</strong>Hello from my cool app. It is really hard but fun,s well and i will  make it.Press the X button to close this message.</p><button>X</button>';
 
 main.insertBefore(flashMessage, traffic);
 flashMessage.className = 'flashMessage';
@@ -16,9 +16,20 @@ flashMessageBtn.addEventListener('click',()=>{
   flashMessage.style.display = 'none';
 });
 // jquery proaba
-$('nav').click(function(){
-  alert('u clicked with jquery');
+//$('nav').click(function(){
+//  alert('u clicked with jquery');
+//});
+
+// HEADER BELL NOTIFICATION Alert
+
+const notification = document.getElementsByClassName('notification')[0];
+const bell = document.getElementsByClassName('svg')[0];
+
+bell.addEventListener('click', ()=>{
+  notification.style.visibility = "hidden";
 });
+
+
 // initialize the chart plugin
 
 var ctx = document.getElementById("myChart");
@@ -98,4 +109,25 @@ var myChartDonut = new Chart(ctx, {
         },
        responsive:true
 });
-//ctx.style.height = '250px';
+ctx.style.height = '250px';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

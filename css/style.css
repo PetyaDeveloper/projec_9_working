@@ -6,12 +6,12 @@ header, body{
     padding: 0;
     color: grey;
 }
-a, button, * {
+a, button {
   cursor: pointer;
 }
-p{
+/* p{
     text-transform: lowercase;
-}
+} */
                        /**    HEADER: DONE!!!!!!!!    **/
 header{
    background:  #7979d2;
@@ -22,7 +22,7 @@ header{
    z-index: 1000;
    display: flex;
    flex-direction: column;
-   flex-wrap: wrap;   
+   flex-wrap: wrap;
 }
 header a{
   text-align: center;
@@ -67,7 +67,15 @@ header ul li{
   padding-left: 10px;
   border-left: 2px solid black;
 }
-
+/*header svg green dot notification*/
+header .notification{
+  height:7px;
+  width:7px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
 /****************************************
  NAV: DONE!!!!!!!!!!!!
 *******************************************/
@@ -123,7 +131,7 @@ nav img{
   border-radius: 7px;
   padding: 2px;
   margin-left: 2.5%;
- 
+
   cursor: pointer;
   justify-content: space-around;
 }
@@ -222,39 +230,30 @@ nav img{
 
    .newMembers, .recentActivity{
      border-bottom: 2px solid lightgrey;
-   }
+  }
     ul{
      list-style-type: none;
-     padding: 0;     
+     padding: 0;
   }
 .newMembers ul li a{
 /*    margin-right: 80px;*/
-    color: orange;
     text-align: center;
-    
+    color: darkblue;
+    text-decoration: none;
+
 }
-   .newMembers ul li{
-/*     padding: 10px 0;*/
-/*     margin: 10px 10px 10px 0;*/
-/*     border-bottom: 1px solid grey;*/
-/*
-     display: table;
-     content: "";
-     clear: both;
-*/
+   .newMembers ul li, .recentActivity ul li{
+     height: 135px;
    }
+
    .images{
      width: 60px;
      height: 60px;
      border-radius: 50%;
      margin-right: 10px;
      padding: 7px;
-/*     float: left;*/
    }
-.newMembers p, .newMembers a{
-  font-size: .8em;
-/*   width: 40%;*/
-}
+
 .newMembers p{
 /*  text-transform: capitalize;*/
   margin: 0;
@@ -270,12 +269,37 @@ nav img{
 .recentActivity ul li{
     border-bottom: 1px solid lightgrey;
 }
-.recentActivity ul p{
+.recentActivity ul li p{
+    text-align: center;
+    display: block;
+}
+/*
+.recentActivity img{
+    display: block;
+    margin: 0 auto;
+}
+*/
+/* .recentActivity ul p{
     margin: 0;
     padding-bottom: 3px;
+} */
+      /*recent activity arrow*/
+      i {
+    border: solid grey;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-45deg);
+/*
+    -webkit-transform: rotate(-45deg);
+          float: right;
+*/
 }
+      .recentActivity p{
+          display: inline-block;
+      }
 
-  
+
             /************************
                 .TABLE done!!!!!!!!!!
             *************************/
@@ -321,40 +345,25 @@ nav img{
 }
                /**********************************************
                            .SETTINGS
-                     *******************************************/
+                 *******************************************/
+p{
+    text-transform: none;
+}
+
+/**  ALIGN SWITCH AND P   **/
+.settings p, .settings input, .settings span, .settings label{
+  display: inline-block;
+}
 .settings p{
-  font-size: 1.3em;
+  text-align: left;
+  width: 50%;
 }
-/*
-.settings a:first-of-type{
-  margin-bottom: 50px;
-}
-*/
-   
-/*
-.settings p, .settings label{
-    display: inline-block;
-}
-*/
-/*
-.inLine{
-    display: flex;
-    justify-content: space-between;
-    border: 3px solid orange;
-}
-*/
-.slider{
-    padding-top: 20.800px;
-    
-}
-                    /**********************************************
-                        togle switch with css :)
-                    ***********************************************/
-   /* The switch - the box around the slider */
+
+/* The switch - the box around the slider, LABEL */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 90px;
   height: 34px;
 }
 
@@ -365,7 +374,7 @@ nav img{
   height: 0;
 }
 
-/* The slider */
+/* The slider  SPAN*/
 .slider {
   position: absolute;
   cursor: pointer;
@@ -383,7 +392,7 @@ nav img{
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
+  left: 6px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -393,6 +402,7 @@ nav img{
 input:checked + .slider {
   background-color: #2196F3;
 }
+
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
@@ -400,7 +410,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  transform: translateX(50px);
 }
 
 /* Rounded sliders */
@@ -411,10 +421,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-p{
-    text-transform: none;
+/*   ON OFF SIGNS STILING*/
+.slider span{
+    color: white;
+    padding-top: 6px;
 }
-                /******************************************************
+.slider span:first-of-type{
+  padding-left: 8px;
+}
+.slider span:last-of-type{
+    padding-left: 25px;
+}
+
+    /******************************************************
                       styling the select timeZone
                 ************************************************/
 .timeZone{
@@ -428,7 +447,9 @@ p{
     margin: 5px auto;
 }
 
-
+.recentActivity p, .newMembers p{
+  margin: 0;
+}
                /*************************
                  MEDIA QUERY: TABLET!!! 769px
                  ****************************/
@@ -438,8 +459,8 @@ p{
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
-   }  
- 
+   }
+
      /****
        .main .traffic on tablet
       ****/
@@ -467,10 +488,14 @@ p{
        justify-content: space-between;
        margin-bottom: 30px;
        width: 100%;
+       padding-top:50px;
      }
      .table input{
-       width: 30%;
-       text-align: right;
+       width: 90%;
+       /* text-align: right; */
+     }
+     .spaceholder{
+       padding-right: 10px;
      }
      .table label{
        color: grey;
@@ -512,11 +537,11 @@ p{
          .newM on TABLET //section
      ***************************/
       .newM div{
-        font-style: italic;
+        /* font-style: italic; */
         width: 49%;
         display: inline-block;
-        border-top: 2px solid lightgrey;
-        border-bottom: 2px solid lightgrey;
+        /* border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey; */
       }
       .newMembers{
         border-right: 2px solid lightgrey;
@@ -526,9 +551,9 @@ p{
       }
       .newMembers ul{
           padding-left: 0;
-      }      
+      }
       /*********************************
-            create TWO COLUMNS FOR recentActivity and newMembers(.flex) 
+            create TWO COLUMNS FOR recentActivity and newMembers(.flex)
                 section .newM
       ********************************/
       .newM{
@@ -537,30 +562,40 @@ p{
       }
       .flex{
           flex: 50%;
-      } 
-      /**  put toggle switches one under the other   ***/
-      
-      
-      
-      
-      
-      
-      
-          
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+          /*  google flex stretch: equal vertically columns*/
+      }
+      .newMembers ul li{
+        margin-right: 28px;
+        border-bottom: 2px solid lightgrey;
+      }
+      /* .newMembers ul li:last-child,.recentActivity ul li:last-child{
+        border-bottom: none;
+      } */
+      .recentActivity ul li{
+        margin-right: 28px;
+       }
+      .newMembers ul li, .recentActivity ul li,
+      .newMembers h3, .recentActivity h3 {
+        text-align: center;
+      }
+      .newMembers ul li, .recentActivity ul li{
+          height: 145px;
+      }
+/*
+      .recentActivity a, .recentActivity p{
+          display: inline-block;
+      }
+      .recentActivity a{
+          float: right;
+          padding-bottom: 50px;
+      }
+      .recentActivity p:last-of-type{
+          text-align: cnter;
+      }
+*/
       /********************
           leftovers: .newM and .messageUser
+          on TABLET 679PX;
       *********************/
       .newM .recentActivity{
         border-bottom: none;
@@ -575,11 +610,11 @@ p{
       .newM .newMembers, .newM .messageUser, .newM .settings, .newM .recentActivity{
         text-align: left;
         padding-left: 2em;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
       }
-      .settings p{
+      /* .settings p{
         text-transform: capitalize;
-      }
+      } */
       .messageUser input, .messageUser textarea, .messageUser button{
           margin-left: 0;
           margin-bottom: 10px;
@@ -587,23 +622,56 @@ p{
       .newM .settings{
         border-bottom: none;
       }
-      .settings button{
-        width: 35%;
-
+      .settings button:first-of-type{
+        width: 37%;
+        margin-left: 10%;
+        margin-top: 5px;
+        padding: 12px 30px;
      }
-     .settings button:last-child{
+     .settings button:last-of-type{
+       width: 37%;
        margin-left: 5%;
+    }
+     /* .settings button:last-child{
+       margin-left: 5%;
+     } */
+  /* settings: toggle switches in line with p!!! TABLET  */
+
+    .newMembers{
+      border-bottom: none;
+    }
+     .newMembers, .recentActivity{
+       padding: 0;
      }
 }
+
 
                         /****************************
                       MEDIA QUERY PC: 1024PX
                         *********************************/
 @media (min-width: 1024px){
-    body{
-        background: orange;
-    }
-    /*input .spaceholder in order to show full label*/
+        /************
+           NAV MAKE IT TO THE LEFT
+    ***************/
+    nav{
+         position: fixed;
+         max-width: 80px;
+         width: 10%;
+         height: 150vh;
+         padding-top: 80px;
+       }
+       .main{
+         padding-left: 80px;
+       }
+       /******
+         fix dashboard and columns messed up because
+         of the fixed side position
+       *****/
+       .table{
+         padding-top: 0;
+       }
+
+    /*input .spaceholder in order to show full label on PC*/
     .table label{
         padding-left: 100px;
     }
@@ -611,24 +679,84 @@ p{
         margin-left: 8%;
         width: 90%;
     }
+        /* same fixing .messageUser is partly under the fixed
+       nav ON PC!!
+     */
+        .newMembers li{
+       padding-left: 60px;
+    }
+    /*************************
+      .newMembers, .recentActivity float img and p
+      in 3 rows
+    *************************/
+    .newMembers ul li, .recentActivity ul li{
+          height: 129px;
+      }
+    .newMembers img, .newMembers a{
+      float: left;
+    }
+    .newMembers p:last-of-type{
+      float: right;
+    }
+    .newMembers p:first-of-type{
+      text-align: left;
+    }
+    /* .newMembers p:first-of-type,.newMembers a{
+      float: left;
+    } */
+
+    .newMembers li{
+      padding-left: 0;
+      padding-top: 30px;
+    }
+    a{
+      text-transform: none;
+    }
+    /*aligning img with p vertically PC*/
+    .newMembers p:first-of-type, .recentActivity p:first-of-type{
+      padding-top: 15px;
+    }
+
+    /* .recentActivity img and p float*/
+    .recentActivity p{
+        display: inline-block;
+/*        padding-left: 30px;*/
+    }
+      .recentActivity img, .recentActivity p:last-of-type{
+      float: left;
+    }
+     
+    .recentActivity a{
+      float: right;
+    }
+    .recentActivity p:first-of-type{
+      text-align: left;
+      width: 95%;
+      padding-top: 10px;
+      
+    }
+   
+    .recentActivity ul li{
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+   
+     .newMembers li:last-of-type, .recentActivity li:last-of-type{
+       border-bottom: none;
+     }
+     .newMembers, .recentActivity{
+       border-top: 2px solid lightgrey;
+     }
+     .newMembers{
+       border-bottom: 2px solid lightgrey;
+     }
+     .settings{
+       border-top: 2px solid lightgrey;
+       padding-left: 34px;
+     }
+    .settings button:first-of-type, .settings .timeZone{
+        margin-left: 0;
+    }
+    
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

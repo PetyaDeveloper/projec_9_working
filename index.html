@@ -3,21 +3,23 @@
   <head>
     <title>My Dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet"  href="dist/toggle-switch.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Acme|Roboto" rel="stylesheet">
   </head>
   <body>
     <header>
-          <a class="MyAweApp">My<b>Awesome</b>App<sup>TM</sup></a>
-          <ul>
-                <li class="svg"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5
-                 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4
-                 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
-                 fill="#fff"/></svg></a></li>
-                <li class="avatarPic"><img src="avatarPic.jpg" alt="profile picture" class="avatar"></li>
-                <li><a>Petya K</a></li>
-          </ul>
+        <a class="MyAweApp">My<b>Awesome</b>App<sup>TM</sup></a>
+        <ul>
+              <li class="svg"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5
+               4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4
+               1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
+               fill="#fff"/></svg><span class="notification"></span></a></li>
+              <li class="avatarPic"><img src="avatarPic.jpg" alt="profile picture" class="avatar"></li>
+              <li><a>Petya K</a></li>
+        </ul>
       </header>
       <div class="flexbox">
         <nav>
@@ -115,21 +117,25 @@
                     <img class="images" src="images/member-1.jpg">
                     <p>Victoria Chambers commented on YourApp's SEO Tips</p>
                     <p>4 hours ago</p>
+                    <a href=""><i class="arrow right"></i></a>
                   </li>
                   <li>
                     <img class="images" src="images/member-2.jpg">
                     <p>Dale Byrd like the post Facebook's Changes for 2019</p>
-                     <p>5 hours ago</p>
+                    <p>5 hours ago</p>
+                    <a><i class="arrow right"></i></a>
                   </li>
                   <li>
                     <img class="images" src="images/member-3.jpg">
                     <p>Dawn Wood commented on Facebook's Changes for 2019</p>
                     <p>5 hours ago</p>
+                    <a><i class="arrow right"></i></a>
                   </li>
                   <li>
                     <img class="images" src="images/member-4.jpg">
                     <p>Dan Oliver posted YourApp's SEO Tips</p>
                     <p>1 day ago</p>
+                    <a><i class="arrow right"></i></a>
                   </li>
                </ul>
              </div><!--.recentActivity-->
@@ -143,26 +149,37 @@
 
            </div><!--.messageUser-->
              <div class = "settings flex">
-              <h3>Settings</h3>
-              <div class="inLine">
-                 <p>Send Email Notafications</p>
+               <h3>Settings</h3>
+
+                   <p>Send Email Notafications</p>
+                 
+                <!--          toggle switch-->
                  <label class="switch">
                       <input type="checkbox">
-                      <span class="slider round"></span>
-                </label>
-                 </div><!--.inLine-->
-                 <div class="inLine">
-                     <p>Set Profile to Public</p>
-                     <label class="switch">
-                          <input type="checkbox">
-                          <span class="slider round">
+                      <span class="slider round">
+                        <span>On</span>
+                         <span>Off</span>
+                      </span>
+                 </label>
 
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                          </span>
-                  </label>
-              </div><!--.inLine-->
+                   <p>Set Profile to Public</p>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round">
+                        <span>On</span>
+                         <span>Off</span>
+                     
+                     </span>
+                 </label>
+                       <!-- <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round">
+                              <span>Off</span>
+                              <span>On</span>
+                              <a></a>
+                            </span>
+                    </label> -->
+
                 <select name="timeZone" class="timeZone">
                     <option value="" disabled selected>Select time zone</option>
                     <option value="cet">CET(Central European Tme)</option>
