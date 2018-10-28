@@ -1,5 +1,10 @@
 const traffic = document.getElementsByClassName('traffic')[0];
-const main = document.getElementsByClassName('main')[0];
+const main = document.getElementsByClassName('main')[0];// HEADER BELL NOTIFICATION Alert
+
+// HEADER BELL NOTIFICATION Alert
+
+const notification = document.getElementsByClassName('notification')[0];
+const bell = document.getElementsByClassName('svg')[0];
 
 //append flashMessage section above the traffic section and
 // make it disappear on click
@@ -10,25 +15,30 @@ flashMessage.innerHTML = '<p><strong>Alert:</strong>Hello from my cool app. It i
 main.insertBefore(flashMessage, traffic);
 flashMessage.className = 'flashMessage';
 const flashMessageBtn = document.querySelector('.flashMessage button');
-console.log(flashMessageBtn);
 
 flashMessageBtn.addEventListener('click',()=>{
   flashMessage.style.display = 'none';
 });
-// jquery proaba
-//$('nav').click(function(){
-//  alert('u clicked with jquery');
-//});
 
-// HEADER BELL NOTIFICATION Alert
+// BELL NOTIFICATION MESSAGSES
 
-const notification = document.getElementsByClassName('notification')[0];
-const bell = document.getElementsByClassName('svg')[0];
+//const notification = document.getElementsByClassName('notification')[0];
+//const bell = document.getElementsByClassName('svg')[0];
+const array = ['You have 3 notifications:', '2 e-mails', 'Doctor\'s appointment at 2', 'Salsa lesson at 5'];
 
-bell.addEventListener('click', ()=>{
-  notification.style.visibility = "hidden";
+function notificationsList(arr){
+    var listHTML = '<ol>';
+    for(let i=0; i<arr.length; i++){
+        listHTML += '<li>' + arr[i] + '</li>';
+    }
+    listHTML += '</ol>';
+}
+
+bell.addEventListener('click',(e)=>{
+   e.preventDefault();
+   notification.style.display = 'none';
+    console.log(notificationsList(array));
 });
-
 
 // initialize the chart plugin
 
@@ -37,7 +47,7 @@ var myChart = new Chart(ctx, {
         type: 'line',
         data: {
             //label: 'none',
-            labels:["16-22", "23-299", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+            labels:["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
             //fontSize: 20,
             datasets: [{
             data: [0, 5, 3, 8, 9, 3,0,9,6,12,18],
@@ -60,6 +70,7 @@ var myChart = new Chart(ctx, {
     },
     responsive:true
 });
+ctx.style.height = '250px';
 
 // CHART 2
 var ctx = document.getElementById("myChartBar");
@@ -67,11 +78,11 @@ var myChartBar = new Chart(ctx, {
         type: 'bar',
         data: {
             //label: 'none',
-            labels:["16-22", "23-299", "30-5", "6-12", "13-19", "20-26", "27-3"],
+            labels:["S", "M", "T", "W", "T", "F", "S"],
             //fontSize: 20,
             datasets: [{
             data: [0, 5, 3, 8, 9, 3,0,9,6,12,18],
-            backgroundColor: '#e6e6ff',
+            backgroundColor: '#7979d2',
            borderColor: '#751aff',
            borderWidth: 1
         }]
@@ -92,8 +103,13 @@ var ctx = document.getElementById("myChartDonut");
 var myChartDonut = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            //label: 'none',
-            labels:["16-22", "23-299", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+               labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ],
+            //label: 'mobile',
+            //labels:["16-22", "23-299", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
             //fontSize: 20,
             datasets: [{
             data: [0, 5, 3, 8, 9, 3,0,9,6,12,18],
@@ -104,7 +120,7 @@ var myChartDonut = new Chart(ctx, {
         },
         options: {
           legend: {
-               display: false
+               display: true,
             }
         },
        responsive:true

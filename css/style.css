@@ -47,7 +47,7 @@ header img{
     padding-left: 3%;
 
 }
-header ul{
+.headerUl{
   font-size: 1.3em;
   margin: 0;
   padding-right: 2.3%;
@@ -57,7 +57,7 @@ header ul{
 /*  justify-content: space-between;*/
     justify-content: center;
 }
-header ul li{
+.headerUl li{
   list-style-type:none;
   text-align: center;
   display: inline-block;
@@ -71,7 +71,7 @@ header ul li{
 header .notification{
   height:7px;
   width:7px;
-  background-color: #bbb;
+  background-color: green;
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 20px;
