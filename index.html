@@ -6,7 +6,7 @@
     <!-- <link rel="stylesheet"  href="dist/toggle-switch.css"> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Acme|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -46,9 +46,9 @@
         </nav>
         <div class="main">
           <section class = "table">
-             <label>Dashboard</label>
+             <h2>Dashboard</h2>
              <div class = "spaceholder">
-                <input type = "text" method = "post" placeholder="search">
+                <input type = "text" placeholder="search">
              </div><!-- .spaceholder  -->
           </section><!-- .table-->
              <section class = "traffic">
@@ -82,15 +82,15 @@
                <div class = "socialMedia">
                   <ul>
                       <li>
-                          <img src = "icons/icon-twitter.svg"/>
+                          <img src = "icons/icon-twitter.svg" alt="twitter logo"/>
                           <p><b>Twitter</b> 10,345</p>
                       </li>
                       <li>
-                        <img src ="icons/icon-facebook.svg"/>
+                        <img src ="icons/icon-facebook.svg" alt="facebook logo"/>
                         <p><b>Facebook</b> 8,739</p>
                       </li>
                       <li>
-                        <img src = "icons/icon-google-plus.svg"/>
+                        <img src = "icons/icon-google-plus.svg" alt="google logo"/>
                         <p><b>Google+</b> 2,530</p>
                      </li>
                 </ul>
@@ -101,25 +101,25 @@
                <h3>New Members</h3>
                <ul>
                   <li>
-                    <img class="images" src="images/member-1.jpg">
+                    <img class="images" src="images/member-1.jpg" alt="avatar-1"/>
                     <p>Victoria Chambers</p>
                     <a href="">victoria.chambers80@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-2.jpg">
+                    <img class="images" src="images/member-2.jpg" alt="avatar-2">
                     <p>Dale Byrd</p>
                     <a href="">dale.byrd52@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-3.jpg">
+                    <img class="images" src="images/member-3.jpg" alt="avatar-3">
                     <p>Dawn Wood</p>
                     <a href="">dawn.wood16@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-4.jpg">
+                    <img class="images" src="images/member-4.jpg" alt="avatar-4">
                     <p>Dan Oliver</p>
                     <a href="">dan.oliver82@example.com</a>
                     <p class="date">18/10/18</p>
@@ -130,25 +130,25 @@
                <h3>Recent Activity</h3>
                <ul>
                   <li>
-                    <img class="images" src="images/member-1.jpg">
+                    <img class="images" src="images/member-1.jpg" alt="avatar-1">
                     <p>Victoria Chambers commented on YourApp's SEO Tips</p>
                     <p>4 hours ago</p>
                     <a href=""><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-2.jpg">
+                    <img class="images" src="images/member-2.jpg" alt="avatar-2">
                     <p>Dale Byrd like the post Facebook's Changes for 2019</p>
                     <p>5 hours ago</p>
                     <a><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-3.jpg">
+                    <img class="images" src="images/member-3.jpg" alt="avatar-3">
                     <p>Dawn Wood commented on Facebook's Changes for 2019</p>
                     <p>5 hours ago</p>
                     <a><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-4.jpg">
+                    <img class="images" src="images/member-4.jpg" alt="avatar-4">
                     <p>Dan Oliver posted YourApp's SEO Tips</p>
                     <p>1 day ago</p>
                     <a><i class="arrow right"></i></a>
@@ -158,10 +158,10 @@
              <div class = "messageUser flex">
 
                   <h3>Message User</h3>
-                  <input type="text" method="post" name="searchForUser" id="searchForUser"
-                  placeholder="Search for User" required/>
-                  <textarea placeholder="Message for User" required></textarea>
-                  <button type="submit">Send</button>
+                  <input type="text" name="searchForUser" id="searchForUser" 
+                  placeholder="Search for User" />
+                  <textarea placeholder="Message for User" class="textArea"></textarea>
+                  <button type="submit" class="submitBtn">Send</button>
 
            </div><!--.messageUser-->
              <div class = "settings flex">
@@ -174,7 +174,7 @@
                       <input type="checkbox">
                       <span class="slider round">
                         <span>On</span>
-                         <span>Off</span>
+                        <span>Off</span>
                       </span>
                  </label>
 
@@ -183,19 +183,10 @@
                       <input type="checkbox">
                       <span class="slider round">
                         <span>On</span>
-                         <span>Off</span>
-                     
-                     </span>
+                        <span>Off</span>
+                      </span>
                  </label>
-                       <!-- <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round">
-                              <span>Off</span>
-                              <span>On</span>
-                              <a></a>
-                            </span>
-                    </label> -->
-
+                      
                 <select name="timeZone" class="timeZone">
                     <option value="" disabled selected>Select time zone</option>
                     <option value="cet">CET(Central European Tme)</option>
