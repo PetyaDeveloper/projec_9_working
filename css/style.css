@@ -165,13 +165,14 @@ nav img{
   color: grey;
   margin-left: 5px;
 }
-.traffic a:hover{
-  background: green;
+.traffic a:focus{
+  background: #66cc66;
   color: white;
   padding: 3px 7px;
   border-radius: 10px;
 
 }
+
 /************************
 .daily_t_m_users  done!!!!!!!!!!!
 **********************/
@@ -181,6 +182,7 @@ nav img{
 .daily_traffic, .mobile_users{
   border-bottom: 2px solid grey;
   padding-bottom: 25px;
+  margin-top: 20px;
 }
 /******************
  SOCIAL STATUS done!!!!!!!!!!!
@@ -189,12 +191,24 @@ nav img{
   text-align: center;
 }
 .social_status img{
+  width: 40px;
+  height: 35px;
+  margin-top: 15px;
+  margin-left: 10px;
+  display: block;
+  }
+.social_status .img-facebook{
+    margin-top: 10px;
+    margin-left: 8px;
+  }
+.div-icons{
+  /* width: 36px;
+  height: 29px; */
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background: blue;
-  padding: 15px;
-  display: inline-block;
+  margin-top: 5%;
 }
 .socialMedia ul{
   display: flex;
@@ -203,21 +217,24 @@ nav img{
   padding-left: 0;
 }
 .socialMedia ul li{
-  list-style-type: none;
-  align-items: center;
-  width: 80%;
+  /* align-items: center; */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
   border: 2px solid lightgrey;
   border-radius: 6px;
   padding: 5px 2%;
   color: grey;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 .socialMedia ul li p{
    display: inline-block;
    padding-left: 10%;
-   width: 40%;
-   margin: 0;
+   /* width: 40%; */
    font-size: 1.8em;
+   /* float: right; */
 }
 
 .socialMedia p b{
@@ -284,12 +301,7 @@ nav img{
     padding-bottom: 3px;
 } */
       /*recent activity arrow*/
-      i {
-    border: solid grey;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-    transform: rotate(-45deg);
+
 /*
     -webkit-transform: rotate(-45deg);
           float: right;
@@ -517,6 +529,9 @@ input:checked + .slider:before {
      .socialMedia ul li:first-child{
        margin-left: 10px;
      }
+     .div-icons{
+
+     }
      /***********************
          .daily_t_m_users ON TABLET
      *************************/
@@ -537,6 +552,7 @@ input:checked + .slider:before {
          .newM on TABLET //section
      ***************************/
       .newM div{
+
         /* font-style: italic; */
         width: 49%;
         display: inline-block;
@@ -725,7 +741,7 @@ input:checked + .slider:before {
       .recentActivity img, .recentActivity p:last-of-type{
       float: left;
     }
-     
+
     .recentActivity a{
       float: right;
     }
@@ -733,14 +749,14 @@ input:checked + .slider:before {
       text-align: left;
       width: 95%;
       padding-top: 10px;
-      
+
     }
-   
+
     .recentActivity ul li{
         padding-left: 10px;
         padding-top: 30px;
     }
-   
+
      .newMembers li:last-of-type, .recentActivity li:last-of-type{
        border-bottom: none;
      }
@@ -757,6 +773,38 @@ input:checked + .slider:before {
     .settings button:first-of-type, .settings .timeZone{
         margin-left: 0;
     }
-    
-    
 }
+/* DROP DOWN MENU!!! MOBILE */
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -50px;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* dropbtn to loose the border on click */

@@ -4,37 +4,35 @@
     <title>My Dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
     <!-- <link rel="stylesheet"  href="dist/toggle-switch.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" /> -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Roboto" rel="stylesheet">
   </head>
   <body>
     <header>
         <a class="MyAweApp">My<b>Awesome</b>App<sup>TM</sup></a>
         <ul class="headerUl">
-            
-<!--
-            <ul class="header-right">
-        <li id="notification-item"><ul id="dropdown">
-          <li class="update">
-            <p>New in your feed: your mother was a hamster and your father smelt of elderberries.</p>
-          </li>
-          <li class="update">
-            <p>Reminder: you have an event coming up tomorrow. But let's be real, you'll probably stay home instead and rewatch old episodes of "Fraggle Rock."</p>
-          </li>
-          <li class="update">
-            <p>Update: Hermione Granger commented on your post.</p>
-          </li>
-        </ul>
--->
-            
-              <li class="svg"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5
-               4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4
-               1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
-               fill="#fff"/></svg><span class="notification"></span></a></li>
-              <li class="avatarPic"><img src="avatarPic.jpg" alt="profile picture" class="avatar"></li>
-              <li><a>Petya K</a></li>
+            <li class="svg"><a href="">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5
+                   4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4
+                   1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
+                   fill="#fff"/>
+                 </a>
+               </svg><a>
+                <span class="notification">
+                  <div class="dropdown">
+                    <button class="dropbtn"></button>
+                    <div class="dropdown-content">
+                      <a href="#">You have 3 new e-mails.</a>
+                      <a href="#">2pm salsa lesson</a>
+                      <a href="#">bla bla bla</a>
+                    </div>
+                  </div>
+                </span>
+              </a></li>
+            <li class="avatarPic"><img src="avatarPic.jpg" alt="profile picture" class="avatar"></li>
+            <li><a>Petya K</a></li>
         </ul>
       </header>
       <div class="flexbox">
@@ -46,9 +44,9 @@
         </nav>
         <div class="main">
           <section class = "table">
-             <h2>Dashboard</h2>
+             <label>Dashboard</label>
              <div class = "spaceholder">
-                <input type = "text" placeholder="search">
+                <input type = "text" method = "post" placeholder="search">
              </div><!-- .spaceholder  -->
           </section><!-- .table-->
              <section class = "traffic">
@@ -60,19 +58,19 @@
                 <li><a href="">Monthly</a></li>
              </ul>
            </section><!-- .traffic-->
-           <section class="plugin"><!-- line -->
-              <div class="plugin"><canvas id="myChart" ></canvas></div>
+           <section class="plugin weekly"><!-- line chart-->
+              <div class="plugin"><canvas id="myChart"></canvas></div>
             </section><!-- .plugin-->
            <section class= "daily_t_m_users">
              <div class = "daily_traffic">
                 <h2> Daily Traffic</h2>
-                <section class="plugin"><!-- bar -->
+                <section class="plugin"><!-- bar chart -->
                    <div class="plugin"><canvas id="myChartBar"></canvas></div>
                 </section><!-- .plugin -->
              </div><!--.daily_traffic-->
              <div class = "mobile_users">
                  <h2>Mobile Users</h2>
-                 <section class="plugin"><!-- donut -->
+                 <section class="plugin"><!-- donut chart-->
                     <div class="plugin"><canvas id="myChartDonut"></canvas></div>
                  </section><!-- .plugin-->
               </div><!--.mobile_users-->
@@ -82,15 +80,24 @@
                <div class = "socialMedia">
                   <ul>
                       <li>
-                          <img src = "icons/icon-twitter.svg" alt="twitter logo"/>
-                          <p><b>Twitter</b> 10,345</p>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                          <path fill="green" d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"/>
+                        </svg> -->
+                        <div class= "div-icons">
+                          <img src = "icons/icon-twitter.svg"/>
+                        </div><!-- div-icons-->
+                    <p><b>Twitter</b> 10,345</p>
                       </li>
                       <li>
-                        <img src ="icons/icon-facebook.svg" alt="facebook logo"/>
+                        <div class= "div-icons">
+                           <img class = "img-facebook" src ="icons/icon-facebook.svg"/>
+                        </div><!-- div-icons-->
                         <p><b>Facebook</b> 8,739</p>
                       </li>
                       <li>
-                        <img src = "icons/icon-google-plus.svg" alt="google logo"/>
+                        <div class= "div-icons">
+                          <img src = "icons/icon-google-plus.svg"/>
+                        </div><!-- div-icons-->
                         <p><b>Google+</b> 2,530</p>
                      </li>
                 </ul>
@@ -101,25 +108,25 @@
                <h3>New Members</h3>
                <ul>
                   <li>
-                    <img class="images" src="images/member-1.jpg" alt="avatar-1"/>
+                    <img class="images" src="images/member-1.jpg">
                     <p>Victoria Chambers</p>
                     <a href="">victoria.chambers80@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-2.jpg" alt="avatar-2">
+                    <img class="images" src="images/member-2.jpg">
                     <p>Dale Byrd</p>
                     <a href="">dale.byrd52@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-3.jpg" alt="avatar-3">
+                    <img class="images" src="images/member-3.jpg">
                     <p>Dawn Wood</p>
                     <a href="">dawn.wood16@example.com</a>
                     <p class="date">18/10/18</p>
                   </li>
                   <li>
-                    <img class="images" src="images/member-4.jpg" alt="avatar-4">
+                    <img class="images" src="images/member-4.jpg">
                     <p>Dan Oliver</p>
                     <a href="">dan.oliver82@example.com</a>
                     <p class="date">18/10/18</p>
@@ -130,25 +137,25 @@
                <h3>Recent Activity</h3>
                <ul>
                   <li>
-                    <img class="images" src="images/member-1.jpg" alt="avatar-1">
+                    <img class="images" src="images/member-1.jpg">
                     <p>Victoria Chambers commented on YourApp's SEO Tips</p>
                     <p>4 hours ago</p>
                     <a href=""><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-2.jpg" alt="avatar-2">
+                    <img class="images" src="images/member-2.jpg">
                     <p>Dale Byrd like the post Facebook's Changes for 2019</p>
                     <p>5 hours ago</p>
                     <a><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-3.jpg" alt="avatar-3">
+                    <img class="images" src="images/member-3.jpg">
                     <p>Dawn Wood commented on Facebook's Changes for 2019</p>
                     <p>5 hours ago</p>
                     <a><i class="arrow right"></i></a>
                   </li>
                   <li>
-                    <img class="images" src="images/member-4.jpg" alt="avatar-4">
+                    <img class="images" src="images/member-4.jpg">
                     <p>Dan Oliver posted YourApp's SEO Tips</p>
                     <p>1 day ago</p>
                     <a><i class="arrow right"></i></a>
@@ -157,36 +164,50 @@
              </div><!--.recentActivity-->
              <div class = "messageUser flex">
 
+                 <!--Make sure the form has the autocomplete function switched off:-->
+<!--                 HOW TO CREATE AUTOCOMPLETE-->
+<!-- <form autocomplete="off" action="">
+  <div class="autocomplete">
+    <input id="searchInput" type="text" name="myCountry" placeholder="Country">
+  </div>
+  <input type="submit">
+</form> -->
+
                   <h3>Message User</h3>
-                  <input type="text" name="searchForUser" id="searchForUser" 
-                  placeholder="Search for User" />
+                  <input list="userNames" id="searchForUser">
+                    <datalist id="userNames">
+                       <option value="Victoria Chambers">
+                       <option value="Dale Byrd">
+                       <option value="Dawn Wood">
+                       <option value="Dan Oliver">
+                   </datalist>
+                  <!-- <input type="text" method="post" name="searchForUser" id="searchForUser"
+                  placeholder="Search for User" /> -->
                   <textarea placeholder="Message for User" class="textArea"></textarea>
                   <button type="submit" class="submitBtn">Send</button>
+
 
            </div><!--.messageUser-->
              <div class = "settings flex">
                <h3>Settings</h3>
-
-                   <p>Send Email Notafications</p>
-                 
+               <p>Send Email Notafications</p>
                 <!--          toggle switch-->
                  <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="checkboxOne">
                       <span class="slider round">
                         <span>On</span>
                         <span>Off</span>
                       </span>
                  </label>
-
                    <p>Set Profile to Public</p>
                     <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="checkboxTwo">
                       <span class="slider round">
                         <span>On</span>
                         <span>Off</span>
                       </span>
                  </label>
-                      
+ <!-- <input type="text" id="timeZone"/> -->
                 <select name="timeZone" class="timeZone">
                     <option value="" disabled selected>Select time zone</option>
                     <option value="cet">CET(Central European Tme)</option>
@@ -195,14 +216,18 @@
                     <option value="Australia,Cidney">Sidney, Australia</option>
                     <option value="Los Angeles">Los Angeles</option>
               </select>
-              <button type="submit">Save</button>
-              <button type="submit">Cancel</button>
-             </div><!--.settings-->
+
+              <button type="submit" id="save">Save</button>
+              <button type="submit" id="remove">Cancel</button>
+            </div><!--.settings-->
            </section><!--.newM-->
         </div><!--main-->
       </div><!--flexbox-->
       <script src="js/jquery-1.11.2.min.js"></script>
-      <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> 
+       <script src="https://d3js.org/d3.v5.min.js"></script> 
+      <script src="js/charts.js"></script>
+      <script src = "js/localStorage.js"></script>
       <script src="js/app.js"></script>
     </body>
   </html>
