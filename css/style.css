@@ -142,11 +142,6 @@ nav img{
   color: white;
 }
 
-/*
-     STYLING THE CHART PLUG IN: 1. making it smaller:
-     cant figure it out :((
-*/
-
 .traffic {
   display: flex;
   justify-content: space-between;
@@ -165,14 +160,13 @@ nav img{
   color: grey;
   margin-left: 5px;
 }
-.traffic a:focus{
+.traffic a:hover{
   background: #66cc66;
   color: white;
   padding: 3px 7px;
   border-radius: 10px;
 
 }
-
 /************************
 .daily_t_m_users  done!!!!!!!!!!!
 **********************/
@@ -182,7 +176,6 @@ nav img{
 .daily_traffic, .mobile_users{
   border-bottom: 2px solid grey;
   padding-bottom: 25px;
-  margin-top: 20px;
 }
 /******************
  SOCIAL STATUS done!!!!!!!!!!!
@@ -202,14 +195,13 @@ nav img{
     margin-left: 8px;
   }
 .div-icons{
-  /* width: 36px;
-  height: 29px; */
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background: blue;
-  margin-top: 5%;
+  margin: auto;
 }
+
 .socialMedia ul{
   display: flex;
   flex-direction: column;

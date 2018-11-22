@@ -52,25 +52,25 @@
              <section class = "traffic">
               <h2>Traffic</h2>
               <ul>
-                <li><a href="">Hourly</a></li>
-                <li><a href="">Daily</a></li>
+                <li><a><input id="hourly" type="radio">Hourly</a></li>
+                <li><a><input id="daily" type="radio">Daily</a></li>
                 <li><a href="">Weekly</a></li>
                 <li><a href="">Monthly</a></li>
              </ul>
            </section><!-- .traffic-->
-           <section class="plugin weekly"><!-- line chart-->
-              <div class="plugin"><canvas id="myChart"></canvas></div>
+           <section class="plugin weekly"><!-- line -->
+              <div class="plugin"><canvas id="myChart" ></canvas></div>
             </section><!-- .plugin-->
            <section class= "daily_t_m_users">
              <div class = "daily_traffic">
                 <h2> Daily Traffic</h2>
-                <section class="plugin"><!-- bar chart -->
+                <section class="plugin"><!-- bar -->
                    <div class="plugin"><canvas id="myChartBar"></canvas></div>
                 </section><!-- .plugin -->
              </div><!--.daily_traffic-->
              <div class = "mobile_users">
                  <h2>Mobile Users</h2>
-                 <section class="plugin"><!-- donut chart-->
+                 <section class="plugin"><!-- donut -->
                     <div class="plugin"><canvas id="myChartDonut"></canvas></div>
                  </section><!-- .plugin-->
               </div><!--.mobile_users-->
@@ -98,7 +98,7 @@
                         <div class= "div-icons">
                           <img src = "icons/icon-google-plus.svg"/>
                         </div><!-- div-icons-->
-                        <p><b>Google+</b> 2,530</p>
+                        <p><b>Google+</b>2,530</p>
                      </li>
                 </ul>
                </div><!-- .socialMedia -->
@@ -192,16 +192,16 @@
                <h3>Settings</h3>
                <p>Send Email Notafications</p>
                 <!--          toggle switch-->
-                 <label class="switch">
-                      <input type="checkbox" id="checkboxOne">
+                 <label class="switch" onclick = "">
+                      <input type="checkbox" id="checkboxOne" checked>
                       <span class="slider round">
                         <span>On</span>
                         <span>Off</span>
                       </span>
                  </label>
                    <p>Set Profile to Public</p>
-                    <label class="switch">
-                      <input type="checkbox" id="checkboxTwo">
+                    <label class="switch" onclick = "">
+                      <input type="checkbox" id="checkboxTwo" checked>
                       <span class="slider round">
                         <span>On</span>
                         <span>Off</span>
@@ -217,15 +217,15 @@
                     <option value="Los Angeles">Los Angeles</option>
               </select>
 
-              <button type="submit" id="save">Save</button>
-              <button type="submit" id="remove">Cancel</button>
+              <button type="submit" id="save" onclick="saveSettings()">Save</button>
+              <button type="submit" id="remove" onclick="removeSettings()">Cancel</button>
             </div><!--.settings-->
            </section><!--.newM-->
         </div><!--main-->
       </div><!--flexbox-->
       <script src="js/jquery-1.11.2.min.js"></script>
-       <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> 
-       <script src="https://d3js.org/d3.v5.min.js"></script> 
+      <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> -->
+      <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
       <script src="js/charts.js"></script>
       <script src = "js/localStorage.js"></script>
       <script src="js/app.js"></script>
